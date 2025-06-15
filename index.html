@@ -1,0 +1,391 @@
+<!-- Indică faptul că documentul este scris conform specificației 
+ HTML Living Standard -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<!--Elementul rădăcină al unui document este ca un container care cuprinde tot 
+conținutul paginii. Orice lucru din afara acestuia nu este perceput de browser
+ ca cod HTML și nu este procesat.
+Atributul lang specifică limba în care este scris textul paginii.
+ Acest lucru este 
+necesar pentru tehnologiile de asistență, cum ar fi screenreader și altele.
+daca un document contine mai multe limbi, adaugam lang sa fie mai accesibil
+-->
+<head>
+    <!--  stoca informații despre pagină: titlu, descriere, codificare etc-->
+<title> Matheasy</title>
+<!-- titul descriptiv al paginii, nu trb sa contina mai mult de 60 de caractere -->
+<meta charset="utf-8" />
+<!-- folosit pentru a stoca informații destinate browserului și motoarelor de căutare:
+ -setarea tipului de codificare
+ -transmiterea informatiilor catre motorul de co=toarele de cautare-->
+ <meta 
+ name="description"
+ content="Pregite bacalaureat"
+ />
+ <!--O descriere scurtă a conținutului ajută motoarele 
+ de căutare să indexeze mai bine pagina.-->
+<link rel="stylesheet" href="./css/styles.css" />
+
+<!-- link- conecteaza 2 fisiere 
+ href- specifica calea fisierului 
+ rel specifica tipul fisierului -->
+</head>
+<body>
+
+    <!--aici o sa fie elementele de tip block si inline 
+    cele block : ocupa toata suprafata liniei si sunt puse unele sub altele
+    cele inline: sunt pune unele dupa altele si daca linia este ocupata se 
+    trece la urmatoarea linie -->
+<header>
+
+    <!--in header este pagina introductiva a paginii 
+    poate contine:- sigla, meniul de navigare, un text introductiv, un titul complex,etc-->
+  
+    
+   <nav>
+    <ul>
+        <li><a  href="Subiectul 1">Subiectul 1 </a></li>
+        <li><a  href="Subiectul 2">Subiectul 2 </a></li>
+        <li><a  href="Subiectul 3">Subiectul 3 </a></li>
+    </ul>
+   </nav>
+
+<section>
+    <h2>Subiectul 1</h2>
+<ul>
+    <li>Exercitiul 1
+       <ol>
+        <li><a href="#Progresii" >Progresii</a></li> 
+
+        <!-- pt a adauga ancora, ne folosim de a href si #, ca s o accesam, cand
+         incepem titlul punem de ex <h2 id="progresii> progresii </2>"-->
+        <li>Logaritmi</li>
+        <li>Puteri si radicali </li>
+        <li>Numere complexe </li>
+        <li>Formule de calcul prescurtat </li>
+       </ol>
+    </li>
+
+    <li>Exercitiul 2</li>
+    <li>Exercitiul 3</li>
+    <li>Exercitiul 4</li>
+    <li>Exercitiul 5</li>
+    <li>Exercitiul 6
+        <!-- la sub 6 o sa avem nevoie si de tabele
+         TABELE:
+         O S AVEM NEVOIE DE :
+         <table> defineste un tabel intreb, este un container
+            <tr> randul tabelului, trb sa aiba continut 
+                <td>-celula tabelului  poati fi folosita doar in cadrul unuui rand
+                    <th>- celula antet, este un tag special, este bold si centrat 
+                Ex:
+                    <table>
+                    <tr> (linia)
+                        <td>433</td>(prima celuka)
+                        <td>Cluj-Napoca - Sibiu</td>( a2 a celuta etc)
+                        <td>5 ore</td>
+                    </tr>
+                    <tr> ( a 2 alinie )
+                        <td>701</td>
+                        <td>Vaslui - Oradea</td>
+                        <td>7 ore</td>
+                    </tr>
+                    <tr>
+                        <td>258</td>
+                        <td>Arad - Sibiu</td>
+                        <td>4 ore</td>
+                    </tr>
+                </table> --> 
+    </li>
+
+
+</ul>
+<h3 id="Progresii">Progresii </h3>
+<ol>
+    <li><h4>Progresia aritmetica </h4>
+    <ol>
+        <li><a href="#Notatii">Notatii </a></li>
+        <li><a href="#Exemplu"> Exemplu </a></li>
+        <li><a href="#Definitie">Definitie </a> </li>
+        <li><a href="#Ratia unei progresi">Ratia unei progresi</a></li>
+        <li><a href="#Formula termenului general">Formula termenului general</a></li>
+        <li><a href="#Suma primilor termeni ai progresiei">Suma primilor termeni ai progresiei</a></li>
+        <li><a href="#Conditia ca trei numere sa fie termeni consecutivi ai unei progresii">Conditia ca trei numere sa fie termeni
+            consecutivi ai unei progresii</a>
+        </li>
+    </ol>
+    <ol><li>
+  <p><h5 id="Notatii">Notatii</h5>
+    a<sub>n</sub> este numit termenul general al unei Progresii
+    sau termenul de rand n <br>
+    Ratia : r </p>
+    </li>
+    <li>
+<h5 id="Exemplu">Exemplu</h5>
+<p>Avem urmatorii termeni ai unei progresii aritmeticaca <br>
+2,5,8,11,..<br>
+a<sub>1</sub>=2<br>
+a<sub>2</sub>=5<br>
+ Ratia o sa fie diferenta dintre al 2-lea si primul termen<br>
+ 5-2=3, deci ratia o sa fie 3<br>
+ Putem observa acest aspect si din diferenta dintre urmatorii termeni  ca:
+2<sup>+3</sup>, 5<sup>+3</sup>, 8<sup>+3</sup>,...
+
+</p></li>
+
+
+
+<li><h5 id="Definitie">Definitie</h5>
+<p>
+    a<sub>n+1</sub>=a<sub>n</sub>+r, &forall; n &isin; &#8469;<sup>*</sup>
+</p></li>
+<li>
+<h5 id="Ratia unei progresi">Ratia unei progresi</h5>
+r=a<sub>n+1</sub>-a<sub>n</sub> , &forall; n &isin; &#8469;<sup>*</sup>
+</li>
+<li>
+ <h5 id="Formula termenului general">Formula termenului general</h5>
+  <p>
+
+    a<sub>n</sub>=a<sub>1</sub>+(n-1)r, &forall; n &isin; &#8469;<sup>*</sup>
+  </p>
+</li>
+<li>
+<h5 id="Suma primilor termeni ai progresiei">Suma primilor termeni ai progresiei</h5>
+<p>
+
+    S<sub>n</sub>=a<sub>1</sub>+a<sub>2</sub>+..+a<sub>n</sub><br>
+
+
+    S<sub>n</sub>=((a<sub>1</sub>+a<sub>n</sub>)n) / 2
+</p> </li>
+
+<li>
+    <h5 id="Conditia ca trei numere sa fie termeni consecutivi ai unei progresii">Conditia ca trei numere sa fie termeni consecutivi ai unei progresii</h5>
+<p>
+    A,B,C &rarr; 2B=A + C 
+</p>
+</li>
+
+</ol>
+
+
+
+<li><h4>Progresia geometrica </h4></li>
+</ol>
+        
+
+
+
+
+
+
+
+<!-- SECTIUNILE DE TABEL:
+ -Exista mai multe tag uri de structura :
+ <thead> – antet, include un grup de rânduri de tabel în zona antetului.
+<tbody> – corp, include grupul principal de rânduri al tabelului.
+<tfoot> – subsol, definește un grup de rânduri de tabel în zona subsolului.
+    ex:
+<table>
+    <thead>
+        <tr>
+            <th>Număr</th>
+            <th>Traseu</th>
+            <th>Timp de călătorie</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>433</td>
+            <td>Cluj-Napoca - Sibiu</td>
+            <td>5 ore</td>
+        </tr>
+        <tr>
+            <td>701</td>
+            <td>Vaslui - Oradea</td>
+            <td>7 ore</td>
+        </tr>
+        <tr>
+            <td>258</td>
+            <td>Arad - Sibiu</td>
+            <td>4 ore</td>
+        </tr>
+    </tbody>
+</table>-->
+<!-- TITLUL TABELULUI 
+ Daca tabelul are titlu , punem un <caption></caption> dupa ce deschidem <table> -->
+    <!--GRUPAREA CELULELOR:
+    -unele tabele au nevoie de imbinarea mai multor celule 
+    - olosim atripului colspan, pe vertical-rowspan 
+    ex: <th rowspan="2">Serviciul cloud</th>(aici ocupa 2 celule pe )
+      <th colspan="3">Utilizare</th>( aici 3 )
+      
+      
+      -->
+</section>
+
+ <section>
+<h2>Subiectul 2</h2>
+</section>
+
+<section>
+    <h2>Subiectul 3</h2>
+</section>
+
+    <!-- h1 este utilizat o singura data in pagina , ca titlu principal al paginii-->
+   
+    <a href="http://127.0.0.1:5501/index.html" target="_blank" rel="noreferrer noopener"> Pagina principala </a>
+    <br>
+    
+     <!--DESPRE A HREF SI ATRIBUTELE ASOCIATE 
+    a este conceput pt a creea linkuri 
+     -href este sursa link ului 
+     ce este dupa ">" este ceea ce o sa apara ca sa faci click
+     Putem adauga si atributele - targel, rel
+     -target="value" determina in ce tab ar trebuii sa se deschida documentul 
+     target="_blank" pagina se deschide intr un document nou 
+     ce face  rel- relatia dinre documentul curent si cel asocial, textul din interior
+     este pt siguranta 
+     la href putem adauga si download pt descarcarea unor fisiere originale
+     ex:< href="/cale/către/cv.pdf" download>Descarcă CV-ul
+        <a href="tel:+14251234563">+1 (425) 123-45-63</a>-
+        poti adauga nr de contact, te redirectioneaza spre apelare
+    <a href="mailto:example@mail.ru">example@mail.ru</a>-
+    te redirectioneaza spre adresa de email 
+     -->
+
+<img src="/images/fundal.pagina.jpg " alt="fundal" width="400" />
+
+<!-- IMAGINI 
+ src= adresa imaginii 
+ alt= mesajul care apare daca nu se incarca pagina 
+ width= dimensiunea, latimea , putem adauga si height, daca lasam doar latimea,
+ o sa se adauge automat o inaltime cat sa pastreze formatul imaginii
+ 
+ IMAGINI CU LINK 
+ -introducem imaginea in codul unului link, 
+ ex 
+ <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
+  <img
+    src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?w=640"
+    alt="Pisică roșcată"
+    width="640"
+  />
+</a>
+
+ IMAGINI CU LEGENDE 
+  ne folosim de tag ul <figure>si <figurcaption>
+    ex:<figure>
+        <!-- Conținut grafic arbitrar: fotografie, grafic, diagramă etc. 
+        <img src="adresa imaginii" alt="text alternativ" />
+        <figcaption>Text explicativ care va fi sub imagine</figcaption>
+    </figure>
+    este ulitilat pentr ilustratii grafice si diagrame 
+    -->
+
+    <!-- GRAFICA BITMAP
+     JPED-- fiere mari care nu necesita un fundal transparent sau animatie 
+     ex:imagini fotorealistice deoarece contine mai multe culori 
+     -aceste imagini sunt codificare sa se incarce in pagina in dungi pe parcurs
+     ce se deruleaza pagina sau in ceata in functie de cum de incarca pagina
+     
+     PNG- caracter suplimentar poate avea transparenta
+     ex:iconite sau caractere decorative
+     
+     
+     GRAFICA VECTORIALA (SVG)
+     ideala pt imagini simple scalabile, ocupand ft putin spatiu
+     ex:iconite, sigle, grafice abstractie si elemente decorative 
+     -->
+ <!--OPTIMIZAREA IMAGINII 
+https://squoosh.app/ -optimizare bitmap
+ https://jakearchibald.github.io/svgomg/ - optimizare vectoriala 
+ 
+ ! trb mai intai optimizata dupa adaugata la document ! --->
+
+</header>
+<footer>
+  <nav> 
+    <ul>
+        <li><a href="mailto:simoacatrini12@yahoo.com" >simoacatrini12@yahoo.com </a>
+    <!-- partea de final a paginii intregi, de regula contine drepturile de autor,
+     legaturile intre retele sociale sau datede contact--></li>
+     <li><a href="tel:+40785743259"> 0785743259 </a></li>
+   <!-- https://validator.w3.org/nu/ - site pt validarea continutului , verifica doar 
+    sintaxa html nu sematica-->
+
+    <!-- INSTRUMENTE DE DEZVOLTARE 
+     Instrumentele de dezvoltare pot fi invocate prin următoarele metode:
+
+Prin apăsarea tastei F12.
+Combinația de taste Ctrl+Shift+I pentru Windows.
+Combinația de taste Cmd+Opt+I pentru MacOS.
+Pe pagina web, dați click dreapta și selectați elementul meniului 
+"Vizualizare cod".-->
+
+<!--GHID PT FORMATAREA CODULUI 
+https://codeguide.co/-->
+</ul> </nav>
+</footer>
+</body>
+</html>
+<!--PENTRU TEXT CE PUTEM UTILIZA :
+
+TAG UL <dl> si <dd>
+    = pentru o lista de perechi de termeni si descrierile acestora-
+    <<dl>
+  <dt>JPEG</dt> ( dt este folosit descriere)
+  <dd>* dd pt definitia care urmeaza )
+    Large files that do not require transparent backgrounds or animations. This format is ideal for vivid photorealistic photographs as it can contain millions of colors.
+  </dd>
+
+  TAG UL SPAN 
+  -pt continut mic , folosit ot stiluri suplimentare
+
+
+  TAGUL PRE 
+  - adauga intreruperi de linie, potrivit pt un cantec sau poezii
+
+  TAGUL <sup> si <sub>
+    -utilizat pentru formule matematica 
+    <sub>-indice jos
+        <sup> indice sus
+TAG UL <strong> si <b>
+     -ambele fac textul bolt dar e o diferenta intre cele 2, strong
+     are scopul de a scoate in evidenta un text important  
+
+
+TAGUL <em> si <i>
+    -sunt folosite pt a sublinia parti din text, din punct de vedere vizual
+    nu exista nicio diferenta
+    - em schimba sensul frazei
+    - i face textul vizual cursiv(ilalic)
+
+
+ TAGUL VIDEO 
+- pt a introduce video si audio in pagina ne folosim de <video>
+    care o sa aiba 
+    -src-specfica adresa fisierului video 
+    0posterLadresa imaginii care este folosita ca poster daca video nu 
+    este incarcat 
+    -width si height -setarea inaltimii si latimii
+    -controls- se adaufa controale video 
+    -autoplay- redarea video va incepe imediat ce devina disponibila
+    -loop- videoclipul se va repeta in bucla 
+    -preload specifica modul de preincarcare a video 
+
+- unele pagini nu suporta video si trb utiizat : webm, mp4, ogg, pt 
+a face acest lucru eliminam atr src si tag ul <video> si adaugam 
+    tag <source> pt fiecare format , in atr src specificam adresa fisierului
+    si la type formatul video 
+
+    ex:<video src="http://techslides.com/demos/sample-videos/small.webm"
+        poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640" width="640" controls autoplay loop
+        preload="auto"></video>
+
+<video poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640" width="640" controls>
+    <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm" />
+-->
